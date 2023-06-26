@@ -22,10 +22,8 @@ public class Transaction {
     private Date transactionDate;
     private double amount;
     private String description;
-
     @ManyToOne
     private BankAccount sourceAccount;
-
     @ManyToOne
     private BankAccount targetAccount;
 }
