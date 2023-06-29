@@ -12,5 +12,6 @@ export interface AccountOperation {
   operationDate: Date;
   amount:        number;
   type:          string;
+  bankAccount:   null;
   description:   string;
 }
