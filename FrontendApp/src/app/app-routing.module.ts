@@ -4,12 +4,14 @@ import {CustomersComponent} from "./customers/customers.component";
 import {AccountsComponent} from "./accounts/accounts.component";
 import {NewCustomerComponent} from "./new-customer/new-customer.component";
 import {CustomerAccountsComponent} from "./customer-accounts/customer-accounts.component";
+import {NewAccountComponent} from "./new-account/new-account.component";
 
 const routes: Routes = [
-  { path :"customers", component : CustomersComponent},
-  { path :"accounts", component : AccountsComponent},
-  { path :"new-customer", component : NewCustomerComponent},
-  { path :"customer-accounts/:id", component : CustomerAccountsComponent},
+  {path:"customers" , component : CustomersComponent},
+  {path:"accounts" , component : AccountsComponent},
+  {path:"new-Customer" , component : NewCustomerComponent},
+  {path:"customer-accounts/:id" , component : CustomerAccountsComponent},
+  {path:"new-accounts" , component : NewAccountComponent}
 ];
 
 @NgModule({

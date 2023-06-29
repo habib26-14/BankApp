@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FrontendApp": {
+    "digital-banking-web": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/frontend-app",
+            "outputPath": "dist/digital-banking-web",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -54,7 +54,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -63,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FrontendApp:build:production"
+              "browserTarget": "digital-banking-web:build:production"
             },
             "development": {
-              "browserTarget": "FrontendApp:build:development"
+              "browserTarget": "digital-banking-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FrontendApp:build"
+            "browserTarget": "digital-banking-web:build"
           }
         },
         "test": {
@@ -99,6 +105,6 @@
     }
   },
   "cli": {
-    "analytics": "66047ee6-77a3-4ee4-bf49-73b4a381bbbc"
+    "analytics": "653d3ce8-5b4a-4a1e-86e1-09ebd6bb6690"
   }
 }
